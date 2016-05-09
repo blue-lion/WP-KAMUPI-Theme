@@ -1,0 +1,241 @@
+html, body {
+    margin: 0;
+    padding: 0
+}
+
+#globalnav {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+    display: block;
+    margin: 0;
+    width: 100%;
+    min-width: 1024px;
+    height: 48px;
+    max-height: 44px;
+    background: #333;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+@media only screen and (min-width: 767px) {
+    body {
+        overflow: scroll !important;
+    }
+
+    #globalnav {
+        height: 48px !important;
+        max-height: 44px !important;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    #globalnav {
+        min-width: 320px
+    }
+}
+
+@-webkit-keyframes ac-gn-curtain-show {
+    0% {
+        opacity: 0;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes ac-gn-curtain-show {
+    0% {
+        opacity: 0;
+        -webkit-animation-timing-function: ease;
+        animation-timing-function: ease
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+#globalnav .globalcontent .gn-header {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    #globalnav {
+        overflow: hidden;
+    }
+
+    #globalnav #gn-class-002 {
+        display: none
+    }
+
+    #globalnav .globalcontent .gn-header {
+        display: block;
+    }
+
+    #globalnav .gn-list {
+        position: absolute;
+        top: 48px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 0 48px;
+        height: auto;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+        -webkit-transition: visibility 0s linear 1s;
+        transition: visibility 0s linear 1s
+    }
+
+    #globalnav .gn-list .menu-item {
+        border-bottom: 1px solid rgba(255, 255, 255, .2)
+    }
+}
+
+#globalnav .gn-list, #globalnav .gn-header {
+    cursor: default;
+    margin: 0;
+    text-align: justify;
+    width: auto;
+    height: 44px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines
+}
+
+#globalnav .gn-list:after, #globalnav .gn-header:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+
+#globalnav .menu-item {
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    z-index: 1;
+    vertical-align: top
+}
+
+#globalnav.ie7 .menu-item {
+    display: inline;
+    zoom: 1
+}
+
+@media only screen and (max-width: 767px) {
+    #globalnav .gn-list .menu-item {
+        width: 100%;
+        height: 48px
+    }
+}
+
+#globalnav #menu-item-23 a {
+    background: url('../images/kmp.png') no-repeat 13px 8px;
+    display: block;
+    text-indent: -999px;
+    height: 40px;
+    width: 33px;
+}
+
+#globalnav .menu-item .icon-search {
+    position: absolute;
+    top: 9px;
+    right: 0;
+    color: #fff;
+    cursor: pointer;
+    text-indent: -9999px;
+    background: url('../images/searchw.png') no-repeat 0 2px;
+    height: 40px;
+    width: 40px;
+}
+
+#globalnav .menu-item .input-search input {
+    width: 0px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 6px;
+    margin: 6px 10px;
+    background: rgba(255, 255, 255, .8);
+    opacity: 0;
+    transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 14px
+}
+
+@media only screen and (max-width: 767px) {
+    #globalnav .menu-item .icon-search {
+        left: 13px;
+        top: 13px;
+    }
+
+    #globalnav .menu-item .input-search input {
+        margin-left: 40px;
+        margin-top: 8px
+    }
+}
+
+#globalnav a {
+    font-size: 16px;
+    line-height: 2.75;
+    font-weight: 400;
+    letter-spacing: normal;
+    opacity: 1;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieopacity)';
+    filter: alpha(opacity=100);
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding: 0 10px;
+    height: 44px;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-tap-highlight-color: transparent;
+    outline-offset: -7px
+}
+
+@media only screen and (max-width: 767px) {
+    #globalnav a {
+        font-size: 20px;
+        line-height: 2.35;
+        font-weight: 300;
+        letter-spacing: normal
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    #globalnav a {
+        height: 48px
+    }
+}
+
+#globalnav a:hover {
+    opacity: .65;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieopacity)';
+    filter: alpha(opacity=65)
+}
+
+#globalnav.no-touch a:hover {
+    opacity: .65;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=$ieopacity)';
+    filter: alpha(opacity=65)
+}
+
+
